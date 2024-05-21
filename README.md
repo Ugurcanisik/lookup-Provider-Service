@@ -7,6 +7,7 @@
 * [RabbitMQ](https://www.rabbitmq.com/)
 * [Docker](https://www.docker.com/products/docker-desktop)
 * [Winston](https://github.com/winstonjs/winston)
+* [Swagger](https://swagger.io/)
 
 ## Kullanım
 
