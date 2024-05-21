@@ -26,6 +26,13 @@ npm run build
 npm start
 ```
 
+Projeyi başlattıktan sonra, API belgelerine Swagger UI aracılığıyla erişebilirsiniz. Tarayıcınızda aşağıdaki URL'yi ziyaret edin:
+
+```bash
+http://localhost:3000/api-docs
+```
+
+
 ### Get Countries Api
 ```bash
 http://localhost:3000/api/v1/countries/list
