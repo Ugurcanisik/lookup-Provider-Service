@@ -9,7 +9,10 @@
     "start:dev": "ts-node -r tsconfig-paths/register src/app.ts",
     "start:prod": "ttsc -P ./tsconfig.json && node --unhandled-rejections=strict ./dist/src/app.js",
     "build": "ttsc -P ./tsconfig.json",
-    "start": "node --unhandled-rejections=strict ./dist/src/app.js"
+    "start": "node --unhandled-rejections=strict ./dist/src/app.js",
+    "test:github": "mocha --config src/config/mocha.config.json",
+    "test:local": "npx ts-node tests/db/init_db.ts && mocha --config src/config/mocha.config.json",
+    "test:local:refresh": "npx sequelize-cli db:seed:undo:all && npx sequelize-cli db:seed:all && mocha --config src/config/mocha.config.json"
   },
   "repository": {
     "type": "git",
@@ -33,7 +36,10 @@
     "test": "^3.3.0",
     "winston": "^3.8.1",
     "swagger-jsdoc": "^6.2.8",
-    "swagger-ui-express": "^5.0.0"
+    "swagger-ui-express": "^5.0.0",
+    "chai": "^4.3.8",
+    "mocha": "^10.2.0",
+    "supertest": "^6.3.3"
   },
   "devDependencies": {
     "@types/amqplib": "^0.10.5",
@@ -55,6 +61,9 @@
     "typescript": "^4.9.4",
     "typescript-transform-paths": "^3.4.6",
     "@types/swagger-jsdoc": "^6.0.4",
-    "@types/swagger-ui-express": "^4.1.6"
+    "@types/swagger-ui-express": "^4.1.6",
+    "@types/chai": "^4.3.6",
+    "@types/mocha": "^10.0.1",
+    "@types/supertest": "^2.0.12"
   }
 }
